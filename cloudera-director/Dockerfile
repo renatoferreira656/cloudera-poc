@@ -22,6 +22,7 @@ RUN util/download_binaries.sh
 
 RUN tar xzf util/gen/binaries/jdk-8u91-linux-x64.tar.gz
 RUN ln -s jdk* jdk
+RUN mkdir -p /usr/lib/jvm/
 RUN ln -s /opt/jdk /usr/lib/jvm/default-java
 ENV JAVA_HOME /opt/jdk
 
